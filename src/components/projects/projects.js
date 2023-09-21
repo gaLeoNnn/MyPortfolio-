@@ -2,7 +2,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { ProjectCard } from "../projectCard/ProjectCard";
 import Tab from "react-bootstrap/Tab";
-// import Tabs from "react-bootstrap/Tabs";
 import "./projects.css";
 
 import projImg2 from "../../assets/img/proj2.png";
@@ -12,6 +11,7 @@ import projImg5 from "../../assets/img/proj5.png";
 import projImg6 from "../../assets/img/proj6.png";
 import projImg7 from "../../assets/img/proj7.png";
 import projImg8 from "../../assets/img/proj8.png";
+import projImg9 from "../../assets/img/proj9.png";
 
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 
@@ -31,6 +31,12 @@ export const Projects = () => {
       href: "https://pizza-time-sage.vercel.app/",
     },
     {
+      title: "Irvas",
+      description: "Project for my clients from the glazing industry",
+      imgUrl: projImg7,
+      href: "https://galeonnn.github.io/IrvisStore/dist/",
+    },
+    {
       title: "MarvelApp",
       description: "An app for Marvel comics fans",
       imgUrl: projImg3,
@@ -42,25 +48,25 @@ export const Projects = () => {
       title: "RunSmart",
       description: "landing page for a heart rate monitor store",
       imgUrl: projImg4,
-      href: "https://nimble-faun-23c936.netlify.app/",
+      href: "https://galeonnn.github.io/RunSmart-/src/",
     },
     {
       title: "FoodProject",
       description: "Balanced nutrition website",
       imgUrl: projImg5,
-      href: "https://foodproject-rust.vercel.app/",
+      href: "https://galeonnn.github.io/FoodProject/",
     },
     {
       title: "Uber Taxi",
       description: "Website for uber candidates",
       imgUrl: projImg6,
-      href: "https://papaya-pudding-a12db3.netlify.app/",
+      href: "https://uber-partner.vercel.app/",
     },
     {
-      title: "Irvas",
-      description: "Project for my clients from the glazing industry",
-      imgUrl: projImg7,
-      href: "https://loquacious-meerkat-d3cef7.netlify.app/",
+      title: "Social Data",
+      description: "I was asked to do adaptive layout , including mobile",
+      imgUrl: projImg9,
+      href: "https://galeonnn.github.io/SocialData/src/",
     },
   ];
 
@@ -89,7 +95,13 @@ export const Projects = () => {
                       })}
                     </Row>
                   </Tab.Pane>
-                  <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
+                  <Tab.Pane eventKey="second">
+                    <Row>
+                      {projects2.map((item, index) => {
+                        return <ProjectCard key={index} {...item} />;
+                      })}
+                    </Row>
+                  </Tab.Pane>
                 </Tab.Content>
               </Row>
             </Tab.Container>
