@@ -6,14 +6,14 @@ import react from "../../assets/img/react.png";
 import typescript from "../../assets/img/typescript.png";
 import javascript from "../../assets/img/javascript.svg";
 import redux from "../../assets/img/redux.svg";
-import sass from "../../assets/img/sass.png";
+import sсss from "../../assets/img/sass.png";
 import bootstrap from "../../assets/img/boot1.png";
 import api from "../../assets/img/api.png";
+import colorSharp from "../../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -56,7 +56,7 @@ export const Skills = () => {
                   <h5>REDUX</h5>
                 </div>
                 <div className="item">
-                  <img src={sass} alt="scss" />
+                  <img src={sсss} alt="scss" />
                   <h5>SCSS</h5>
                 </div>
                 <div className="item">
@@ -71,7 +71,12 @@ export const Skills = () => {
             </div>
           </Col>
         </Row>
+        <p style={{ margin: "60px auto 60px auto", textAlign: "center" }}>
+          I am eager to learn new technologies and use my experience to help my team become industry leaders. I am
+          passionate about development and strive to practice and learn something new every day.
+        </p>
       </Container>
+      <img className="background-image-left" src={colorSharp} alt="colorSharp" />
     </section>
   );
 };
