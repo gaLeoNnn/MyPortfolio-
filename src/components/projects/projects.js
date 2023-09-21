@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import { ProjectCard } from "../projectCard/ProjectCard";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
@@ -11,16 +12,18 @@ import projImg5 from "../../assets/img/proj5.png";
 import projImg6 from "../../assets/img/proj6.png";
 import projImg7 from "../../assets/img/proj7.png";
 import projImg8 from "../../assets/img/proj8.png";
+
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "STUFF store",
-      description: "Stylish clothing store",
+      title: "Beauty-starter",
+      description: "Online customer recording, sorting by time and canceling appointments",
       imgUrl: projImg8,
-      href: "https://react-store-srhndk.vercel.app/",
+      href: "https://beauty-starter.vercel.app/",
     },
+    ,
     {
       title: "IBoard",
       description: "Acounting of employees and customers",
@@ -37,7 +40,7 @@ export const Projects = () => {
       title: "MarvelApp",
       description: "An app for Marvel comics fans",
       imgUrl: projImg3,
-      href: "https://marvelapp-alpha.vercel.app/",
+      href: "https://galeonnn.github.io/MarvelMovies/",
     },
   ];
   const projects2 = [
@@ -74,28 +77,26 @@ export const Projects = () => {
           <Col>
             <h2></h2>
             <p>Welcome to my projects, enjoy😊</p>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+            <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Row>
-                <Col sm={3}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col sm={9}>
-                  <Tab.Content>
-                    <Tab.Pane eventKey="first">
+                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center">
+                  <Nav.Item>
+                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+                <Tab.Content id="slideInUp" className="tab-content">
+                  <Tab.Pane eventKey="first">
+                    <Row>
                       {projects.map((item, index) => {
                         return <ProjectCard key={index} {...item} />;
                       })}
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
-                  </Tab.Content>
-                </Col>
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
+                </Tab.Content>
               </Row>
             </Tab.Container>
           </Col>
