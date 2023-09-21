@@ -2,9 +2,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { ProjectCard } from "../projectCard/ProjectCard";
 import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
+// import Tabs from "react-bootstrap/Tabs";
 import "./projects.css";
-import projImg1 from "../../assets/img/proj1.png";
+
 import projImg2 from "../../assets/img/proj2.png";
 import projImg3 from "../../assets/img/proj3.png";
 import projImg4 from "../../assets/img/proj4.png";
@@ -24,12 +24,6 @@ export const Projects = () => {
       href: "https://beauty-starter.vercel.app/",
     },
     ,
-    {
-      title: "IBoard",
-      description: "Acounting of employees and customers",
-      imgUrl: projImg1,
-      href: "https://react-dashboard-wheat.vercel.app/",
-    },
     {
       title: "PIZZA TIME",
       description: "Pizza purchase app",
@@ -71,7 +65,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col>
